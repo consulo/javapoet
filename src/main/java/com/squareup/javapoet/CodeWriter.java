@@ -81,7 +81,7 @@ final class CodeWriter {
       Map<String, ClassName> importedTypes,
       Set<String> staticImports,
       Set<String> alwaysQualify) {
-    this.out = new LineWrapper(out, indent, 100);
+    this.out = new LineWrapper(out, indent, Integer.MAX_VALUE);
     this.indent = checkNotNull(indent, "indent == null");
     this.importedTypes = checkNotNull(importedTypes, "importedTypes == null");
     this.staticImports = checkNotNull(staticImports, "staticImports == null");
